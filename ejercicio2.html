@@ -1,0 +1,27 @@
+<script>
+//Osmelis Herrera
+    const inicio=["unacadena",3,9,1,10,500,1,10,true];
+     let solonumero=[];
+        inicio.forEach(function(elemento, indice, array) {
+            if (Number.isInteger(elemento)){
+            solonumero.push(elemento);
+        };
+    })
+           for (let i = 0; i < solonumero.length; i++) 
+    {      
+        for (let j = i + 1; j < solonumero.length; j++) 
+        {  
+            let tmp = 0;                            
+            if (solonumero[i] < solonumero[j]) 
+            {          
+                tmp = solonumero[i];               
+                solonumero[i] = solonumero[j];            
+                solonumero[j] = tmp;
+            }
+        }
+    }
+    for (let i = 0; i < solonumero.length; i++) 
+        {     
+        console.log(solonumero[i]);  
+    }
+    </script>
